@@ -102,27 +102,69 @@ dependency except ZXing for QR decoding. Read it.
 
 ## Legal, terms, and your responsibility
 
-Please read this carefully rather than skimming it.
+CRED's [terms & conditions](https://cred.club/terms) were read on 16 September 2026 while writing
+this. That is a reading, **not a legal review**, and it is not advice. Terms change; read them
+yourself. What follows is what the document actually says, with the parts that cut both ways.
 
-**No compliance claim is made or implied.** This project has **not** been reviewed against the terms
-of service of CRED, NPCI, UPI, any bank, any payment service provider, or Google Play, and no legal
-review of any kind has been performed. Nothing here should be read as an assurance that using it
-complies with any agreement, regulation, or policy that binds you.
+### What the terms support
 
-**Automating another application's interface may conflict with that application's terms.** Many
-apps — payment apps especially — restrict automated interaction, accessibility-driven control, or
-unattended operation. Whether that applies to your use, your account, and your jurisdiction is a
-question only you can answer, and you should answer it *before* running this.
+Section 2 ("Your Use of CRED"), clause **h** is the reverse-engineering prohibition:
 
-**You are solely responsible** for how you use this software: for reading the relevant terms, for
-obtaining any permission you need, for compliance with applicable law, and for every consequence,
-including a restricted or suspended account.
+> "You shall not indulge in decompiling, reverse engineering, disassembling content, removing any
+> intellectual property right associated with the CRED App, including our copyright, trademarks,
+> trade secrets, designs, and patents, or other proprietary notices."
+
+Ranna does none of these. It is not built from anything extracted from the CRED app, it calls no
+private interface, and it modifies nothing. Clause **c** limits use of CRED Platforms to "personal
+purposes", which is the only use this project is for.
+
+Notably, the general terms contain **no blanket prohibition on users interacting with the app
+through automated or accessibility software**. The word "automated" appears twice in the whole
+document, and neither instance is a general user restriction.
+
+### What the terms put at risk
+
+**Section E.3(e)** restricts automated access — but binds *Merchants*, not customers:
+
+> "The Merchant specifically undertakes not to access or attempt to access the Payment Aggregator
+> Services through any automated means (including by use of scripts or web crawlers)."
+
+**Section Z** (Supplemental Terms for the CRED IndusInd Bank RuPay Credit Card), under *System
+Exploitation*, is the clause that matters most here:
+
+> "Using automated tools, bots, or scripts to manipulate transactions or rewards."
+
+listed alongside "Engaging in circular transactions or manufactured spending" and
+"Reverse-engineering or tampering with the CRED App or the Rewards Program". Clause **10.5** allows
+CRED to "immediately suspend or terminate the Rewards Program without prior notice" for "any conduct
+intended to wrongfully obtain or inflate reward points", with unredeemed points forfeited.
+
+**Read that clause before using split mode.** CRED awards a reward per payment. Splitting one total
+into three parts produces three reward events where a single payment produces one. That is a side
+effect of splitting, not a goal of this project — Ranna has no reward logic and never presses
+*Claim now* — but an automated tool that multiplies reward-bearing transactions is close to what
+that clause describes. If you hold that card, or if CRED reads its rewards terms broadly, this is
+the real exposure.
+
+Two further catch-alls in Section 2 are worth weighing: clause **i** (do not use the app in a manner
+that "may be harmful to the operation of the CRED App or its content") and clause **k** ("You shall
+not delete or modify any content of the CRED App"), which is at least arguable against
+automatically dismissing a banner.
+
+### Where that leaves you
+
+**No compliance claim is made.** No legal review has been performed, and nothing here assures you
+that your use complies with any agreement, regulation, or policy that binds you — CRED's terms,
+NPCI or UPI rules, your bank's terms, or Google Play policy.
+
+**You are solely responsible** for reading the current terms, deciding whether your use is permitted,
+and for every consequence — including suspension or termination of your account or rewards, which
+CRED may do without notice.
 
 **Intended use is your own device and your own money**, for learning. Using it against anyone else's
-account, or in any way that misleads a merchant or payee, is neither supported nor endorsed.
+account, or in a way that misleads a merchant or payee, is neither supported nor endorsed.
 
-If you are unsure about any of the above, the correct action is to read the source for understanding
-and **not run it**.
+If you are unsure about any of the above, read the source for understanding and **do not run it**.
 
 ---
 
