@@ -1,0 +1,26 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="in.nxprototype.app" android:versionCode="13" android:versionName="0.1.12">
+ <uses-sdk android:minSdkVersion="26" android:targetSdkVersion="35" />
+ <uses-permission android:name="android.permission.CAMERA" />
+ <uses-feature android:name="android.hardware.camera" android:required="false" />
+ <queries><intent><action android:name="android.intent.action.VIEW"/><data android:scheme="upi"/></intent>
+ <package android:name="com.dreamplug.androidapp" />
+ <package android:name="in.org.npci.upiapp" />
+ <package android:name="com.google.android.apps.nbu.paisa.user" />
+ <package android:name="com.phonepe.app" />
+ <package android:name="net.one97.paytm" />
+ <package android:name="in.amazon.mShop.android.shopping" />
+ </queries>
+ <application android:label="@string/app_name" android:theme="@style/AppTheme" android:icon="@drawable/ic_app" android:allowBackup="false" android:usesCleartextTraffic="false" android:debuggable="false">
+  <activity android:name=".AssistedSplitActivity" android:exported="false" android:configChanges="orientation|screenSize" />
+  <service android:name=".CredAssistService" android:label="Ranna CRED navigation" android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" android:exported="true">
+   <intent-filter><action android:name="android.accessibilityservice.AccessibilityService" /></intent-filter>
+   <meta-data android:name="android.accessibilityservice" android:resource="@xml/cred_assist" />
+  </service>
+  <service android:name=".CredObserverService" android:label="Ranna CRED observer" android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" android:exported="true">
+   <intent-filter><action android:name="android.accessibilityservice.AccessibilityService" /></intent-filter>
+   <meta-data android:name="android.accessibilityservice" android:resource="@xml/cred_observer" />
+  </service>
+  <activity android:name=".MainActivity" android:exported="true" android:windowSoftInputMode="adjustResize"><intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter></activity>
+  <activity android:name=".ScanActivity" android:exported="false" android:screenOrientation="portrait" />
+ </application>
+</manifest>

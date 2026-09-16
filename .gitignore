@@ -1,0 +1,16 @@
+# Build output — no APK is ever committed or released. Build from source.
+dist/
+build/
+
+# Signing keys. Generated locally on first build; never share or commit.
+*.jks
+*.keystore
+*.idsig
+
+# Local tooling noise
+.idea/
+*.iml
+.vscode/
+.DS_Store
+Thumbs.db
+local.properties

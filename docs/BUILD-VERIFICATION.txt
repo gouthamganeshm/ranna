@@ -1,0 +1,19 @@
+PASS: 35 payment parsing, amount, metadata and callback checks
+PASS: 17 queue checks (decimal totals, metadata rejection, receipt gating, completion)
+PASS: 71 split and navigation-session checks
+PASS: 20 observer checks (consent, handoff, expiry, stop and metadata filtering)
+PASS: 72 runtime state cases and resolved-handler merge regression
+PASS: 7 discovery regression scenarios (targeted-only apps, deduplication, inaccessible/self/null/empty targets)
+PASS: 12 QR checks (rotations, inverted colours, off-centre screenshot, blank)
+warning: [options] bootstrap class path not set in conjunction with -source 8
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+1 warning
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1

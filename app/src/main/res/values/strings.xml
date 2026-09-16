@@ -1,0 +1,7 @@
+<resources>
+ <string name="app_name">Ranna</string>
+ <string name="tagline">ಕನ್ನಡಿಗರಿಂದ ಭಾರತಕ್ಕೆ</string>
+ <string name="educational">For educational and research purposes only. Not a product, not a payment service.</string>
+ <string name="observer_description">Optional CRED diagnostics for Ranna, an educational prototype. Records window-transition timing and class names only during an explicitly armed payment handoff. Does not read text, capture screens, enter PINs or perform taps. Arm each session inside Ranna. Stop there or disable this service here.</string>
+ <string name="assist_description">Optional split-payment navigation for Ranna, an educational prototype. With separate in-app consent, reads visible CRED UI locally to verify the recipient and amount of a planned part, presses Pay now to open CRED authentication for that part only, and after the payment dismisses CRED reward banners and result screens. It cannot authorise a debit: the fingerprint or UPI PIN is the approval and stays with you. Claim now is never pressed. No raw screen text, credentials or screenshots are recorded. Unknown or mismatched screens pause for manual navigation. Disable after testing.</string>
+</resources>
